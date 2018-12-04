@@ -42,8 +42,6 @@ pike.generatePikeTotalDailySales();
 pike.render();
 console.log(pike.avgCookiesSoldPerHour);
 
-
-
 var seatac = {
   location: 'SeaTac Airport',
   minCust: 3,
@@ -91,6 +89,7 @@ var seattleCenter = {
   avgCookies: 3.7,
   randomNumber: 0,
   avgCookiesSoldPerHour: [],
+  totalDailySales: 0,
   randomCust: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)+ this.minCust);
   },
@@ -107,13 +106,20 @@ var seattleCenter = {
     console.log(this.totalDailySales);
   },
   render: function() {
-    var seacenElement = document.πgetElementById('seattle-center');
+    var seacenElement = document.getElementById('seattle-center');
     for (var i = 0; i < hours.length; i++) {
-      
+      var liEl = document.createElement('li');
+      liEl.textContent = `${hours[i]}: ${this.avgCookiesSoldPerHour[i]} cookies`;
+      seacenElement.appendChild(liEl);
     }
+    liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalDailySales} cookies`;
+    seacenElement.appendChild(liEl);
   }
 };
 seattleCenter.calculateAvgCookiesSold();
+seattleCenter.generateSeaCenTotalDailySales();
+seattleCenter.render();
 console.log(seattleCenter.avgCookiesSoldPerHour);
 
 
@@ -124,6 +130,7 @@ var capHill = {
   avgCookies: 2.3,
   randomNumber: 0,
   avgCookiesSoldPerHour: [],
+  totalDailySales: 0,
   randomCust: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)+ this.minCust);
   },
@@ -132,9 +139,28 @@ var capHill = {
       var avgCookiesSold = Math.floor(this.randomCust () * this.avgCookies);
       this.avgCookiesSoldPerHour.push(avgCookiesSold);
     }
+  }, 
+  generateCapHillTotalDailySales: function() {
+    for (var i = 0; i < this.avgCookiesSoldPerHour[i]; i++) {
+      this.totalDailySales += this.avgCookiesSoldPerHour[i];
+    }
+    console.log(this.totalDailySales);
+  },
+  render: function() {
+    var capHillElement = document.getElementById('cap-hill');
+    for ( var i = 0; i < hours.length; i++) {
+      var liEl = document.createElement('li');
+      liEl.textContent = `${hours[i]}: ${this.avgCookiesSoldPerHour[i]} cookies`;
+      capHillElement.appendChild(liEl);
+    }
+    liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalDailySales} cookies`;
+    capHillElement.appendChild(liEl);
   }
 };
 capHill.calculateAvgCookiesSold();
+capHill.generateCapHillTotalDailySales();
+capHill.render();
 console.log(capHill.avgCookiesSoldPerHour);
 
 var alki = {
@@ -144,6 +170,7 @@ var alki = {
   avgCookies: 4.6,
   randomNumber: 0,
   avgCookiesSoldPerHour: [],
+  totalDailySales: 0,
   randomCust: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)+ this.minCust);
   },
@@ -152,8 +179,26 @@ var alki = {
       var avgCookiesSold = Math.floor(this.randomCust () * this.avgCookies);
       this.avgCookiesSoldPerHour.push(avgCookiesSold);
     }
+  },
+  generateAlkiTotalDailySales: function() {
+    for (var i = 0; i < hours.length; i++) {
+      this.totalDailySales += this.avgCookiesSoldPerHour[i];
+    }
+    console.log(this.totalDailySales);
+  },
+  render: function() {
+    var alkiElement = document.getElementById('alki');
+    for (var i = 0; i < hours.length; i++) {
+      var liEl = document.createElement('li');
+      liEl.textContent = `${hours[i]}: ${this.avgCookiesSoldPerHour[i]} cookies`;
+      alkiElement.appendChild(liEl);
+    }
+    liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalDailySales} cookies`;
+    alkiElement.appendChild(liEl);
   }
 };
 alki.calculateAvgCookiesSold();
+alki.generateAlkiTotalDailySales();
+alki.render();
 console.log(alki.avgCookiesSoldPerHour);
-
