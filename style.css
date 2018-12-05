@@ -1,15 +1,28 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
 body {
-  background-color: peachpuff;
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: coral;
+  background: salmon;
 }
 
-h1 {
-  background-color: orchid;
-  border: 20px solid orange;
+h1, h2 {
+	color: white;
 }
 
-img {
-  float: right;
+table {
+	border: 20px solid purple;
+	empty-cells: hide;
+}
+
+td {
+	padding: 20px;
+	border-radius: 15px;
+  border: 1px solid black;
+  background: white;
+}
+
+th {
+	background-color: #F7B733;
+	color: rgb(204, 9, 100);
 }
