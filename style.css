@@ -1,5 +1,6 @@
 * {
 	font-family: 'Montserrat', sans-serif;
+	color: purple;
 }
 
 body {
@@ -7,22 +8,29 @@ body {
 }
 
 h1, h2 {
+	background-color: #F7B733;
 	color: white;
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	border: coral 30px groove;
 }
+
 
 table {
 	border: 20px solid purple;
-	empty-cells: hide;
+	empty-cells: show;
 }
 
 td {
 	padding: 20px;
 	border-radius: 15px;
   border: 1px solid black;
-  background: white;
+	background: pink;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 th {
-	background-color: #F7B733;
+	background-color: orange;
 	color: rgb(204, 9, 100);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
