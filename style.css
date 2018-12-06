@@ -34,3 +34,10 @@ th {
 	color: rgb(204, 9, 100);
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+form {
+	background-color: green;
+	color: blueviolet;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-align: center;
+}

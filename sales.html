@@ -5,22 +5,29 @@
   </head>
   <body>
     <h2>Salmon Cookie Sales Projections</h2>
-    <img src='https://raw.githubusercontent.com/codefellows/seattle-201d42/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png' alt="Realistic Salmon Image">
+    <img src='https://raw.githubusercontent.com/codefellows/seattle-201d42/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png' alt="Ugly Salmon Image">
     <table id="salmon-cookies"></table>
+   
+    <form id ="form-salmon-cookies">
+      <fieldset>
+      
+      <legend>Add A New Store!!</legend>
+      
+      <label for="location">Location</label>
+      <input id="location" type="text" name="storelocation" />      
+     
+      <label for="min">Minimum # of customers</label>
+      <input id="min" type="text" name="minimum # of cutomers per hour" />      
+     
+      <label for="max">Maximum # of cutomers</label>
+      <input id="max" type="text" name="maximum # of cutomers per hour" />      
+     
+      <label for="avgcookies">Average cookies per customer</label>
+      <input id="avgcookies" type="text" name="average cookies sold per customer" />
 
-    <ul id="pike"></ul>
-
-
-    <ul id="sea-tac"></ul>
-
-
-    <ul id='seattle-center'></ul>
-
-  
-    <ul id='cap-hill'></ul>
-
-    <ul id='alki'></ul>
-
+      <button>Add A Store</button>
+    </fieldset>
+    </form>
 
     <script src='app.js'></script>
   </body>
