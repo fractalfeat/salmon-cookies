@@ -1,6 +1,8 @@
 'use strict';
 
 var salmonTable = document.getElementById('salmon-cookies');
+var form = document.getElementById('form-salmon-cookies');
+
 var hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'];
 Salmon.allStores = [];
 
@@ -49,12 +51,28 @@ Salmon.renderHeader = function() {
 Salmon.renderFooter = function() {
   var footerRow = document.createElement('tr');
   var dailyTotals = [];
-  for( var i = -1; i <dailyTotals.length; i++) {
+  for( var i = -1; i < allStores.length; i++) {
     var thEl = document.createElement('th');
     thEl.textContent = footerRow[i];
     footerRow.appendChild(thEl)
   }
   salmonTable.append(footerRow);
+};
+
+Salmon.addNewStore = function() {
+  event.preventDefault();
+
+  var newLocation = event.target.storelocation.value;
+  var newMin = event.target.storeMin.value;
+  var newMax = event.target.storeMax.value;
+  var newAvg = event.target.storeAvg.value;
+
+  var newStore = new Salmon(newLocation, newMin, newMax, newAvg);
+  newStore.render();
+
+  salmonTable.textContent = '';
+  Salmon.renderHeader();
+  Salmon.renderAllStores();
 };
 
 var pike = new Salmon('1st and Pike', '23', '65', '6.3');
@@ -63,6 +81,12 @@ var seattleCenter = new Salmon('Seattle Center', '11', '24','3.7');
 var capHill = new Salmon('Capital Hill', '20', '38', '2.3');
 var alki = new Salmon('Alki', '2', '16', '4.6');
 
+Salmon.renderAllStores = function() {
+  for(var i = 0; i < hours.length; i++) {
+    Salmon.allStores[i].render();
+  }
+};
+
 Salmon.renderHeader();
 pike.render();
 seatac.render();
@@ -70,3 +94,6 @@ seattleCenter.render();
 capHill.render();
 alki.render();
 Salmon.renderFooter();
+// Salmon.renderAllStores();
+
+form.addEventListener('submit', Salmon.addNewStore); 
