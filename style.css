@@ -51,3 +51,6 @@ img {
 	padding: 20px;
 	position: relative;
 }
+ul li {
+	position: center;
+}
