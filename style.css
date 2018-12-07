@@ -44,3 +44,10 @@ form {
 form button {
 	background-color: #b000b5;
 }
+img {
+	border: 30px solid #b000b5;
+	width: 200px;
+	height: relative;
+	padding: 20px;
+	position: relative;
+}
