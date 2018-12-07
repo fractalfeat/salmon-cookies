@@ -6,13 +6,19 @@
 body {
   background: salmon;
 }
+header {
+	background-color: #707020;
+	border: darkturquoise dashed 20px ;
+}
 
 h1, h2 {
 	background-color: #F7B733;
 	color: white;
 	text-align: center;
 	font-family: 'Times New Roman', Times, serif;
-	border: coral 30px groove;
+	font-size: 50px;
+	font-style: oblique;
+	border: coral 70px groove;
 }
 
 table {
@@ -46,11 +52,47 @@ form button {
 }
 img {
 	border: 30px solid #b000b5;
-	width: 200px;
+	width: 300px;
 	height: relative;
 	padding: 20px;
-	position: relative;
+	margin: 0px auto;
+	display: block;
 }
 ul li {
 	position: center;
+	text-align: center;
+	list-style: none;
+	background-color: #707020;
+	float: left;
+}
+
+img.chinook {
+	border: #F7B733 solid 30px;
+	width: 300px;	
+	margin: 0px auto;
+	display: block;
+}
+
+img.cutter-fish {
+	border: #208075 groove 20px;
+}
+
+img.family-eating {
+	border: #F7B733 double 40px;
+}
+
+img.cartoon-fish {
+	border: #208075 dotted 33px;
+}
+
+img.frosted-cookie {
+	border: #F7B733 double 25px;
+}
+
+img.salmon {
+	border: #707020 groove 47px;
+}
+
+img.salmon-print-shirt {
+	border: #F7B733 solid 25px;
 }
